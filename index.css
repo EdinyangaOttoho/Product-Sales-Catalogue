@@ -48,12 +48,109 @@
      color:orange;
      text-shadow:gray 2px 2px 1px;
    }
+   #cart{
+     width:100vw;
+     height:100vh;
+     overflow-y:auto;
+     background-color:rgba(0,0,0,0.8);
+     position:fixed;
+     top:0px;
+     right:0px;
+     visibility:hidden;
+   }
+   .cart-click{
+     position:fixed;
+     width:80px;
+     height:80px;
+     bottom:5px;
+     right:5px;
+     border:0px;
+     box-shadow:2px 2px 2px 2px lightgray;
+     background-image:url('cart.png');
+     background-size:100% 100%;
+     background-repeat:no-repeat;
+     border-radius:50%;
+     cursor:hand;
+   }
+   #cart-items{
+     border-radius:10px;
+     padding:45px;
+     width:50vw;
+     height:80vh;
+     position:relative;
+     top:10vh;
+     background-image:linear-gradient(60deg,#f2f2f2, white);
+     overflow-y:auto;
+   }
+   .item{
+     font-family:tahoma;
+     font-weight:bold;
+     font-size:22px;
+     font-style:italic;
+     border-bottom:2px solid lightgray;
+     padding-top:5px;
+   }
+   .price{
+     text-align:left;
+     font-family:tahoma;
+     font-size:22px;
+     font-weight:bold;
+     color:cornflowerblue;
+     border-bottom:2px solid lightgray;
+     padding-top:5px;
+   }
+   .total{
+     font-family:tahoma;
+     font-weight:bold;
+     font-size:30px;
+     font-style:italic;
+     border-top:2px solid gray;
+     padding-top:20px;
+     color:cornflowerblue;
+     text-align:center;
+   }
+   .totalamount{
+     text-align:left;
+     font-family:tahoma;
+     font-size:28px;
+     font-weight:bold;
+     color:cornflowerblue;
+     border-top:2px solid gray;
+     padding-top:20px;
+   }
+   .close{
+     border:0;
+     background-color:transparent;
+     font-size:40px;
+     color:maroon;
+     font-weight:bold;
+     cursor:hand;
+   }
+   .checkout{
+     border:0px;
+     font-weight:bold;
+     font-family:candara;
+     font-size:24px;
+     font-style:italic;
+     padding:10px;
+     text-shadow:gray 2px 2px 1px;
+     background-image:linear-gradient(60deg,orange,goldenrod);
+     border-radius:8px;
+     cursor:hand;
+   }
    @media(max-width:1100px){
    	 .entry{
        width:45.5vw;
    	 }
+     #cart-items{
+      width:75vw;
+     }
    }
    @media(max-width:700px){
+     #cart-items{
+       width:85vw;
+       padding:20px;
+     }
    	 .entry{
        width:90vw;
    	 }
@@ -62,6 +159,21 @@
        margin-top:25px;
    	 }
    	 .item-image{
-   	 	width:85%;
+   	 	 width:85%;
    	 }
+     .item{
+       font-size:18px;
+     }
+     .price{
+       font-size:18px;
+     }
+     .total{
+       font-size:24px;
+     }
+     .totalamount{
+       font-size:22px;
+     }
+    .checkout{
+       font-size:20px;
+     }
    }
