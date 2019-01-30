@@ -14,6 +14,7 @@ function pay(){
     }
     var pr = p.split(",");
     document.getElementById("counter").innerHTML = pr.length;
+    document.getElementById("counter").style.visibility = 'visible';
 }
 function cl(){
   document.getElementById("cart").style.visibility='hidden';
