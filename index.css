@@ -151,6 +151,7 @@
      padding-left:8px;
      padding-right:8px;
      font-weight:bold;
+     visibility:hidden
    }
    @media(max-width:1100px){
    	 .entry{
