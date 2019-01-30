@@ -138,6 +138,20 @@
      border-radius:8px;
      cursor:hand;
    }
+   .popcount{
+     position:fixed;
+     bottom:58px;
+     right:10px;
+     border-radius:50%;
+     font-size:20px;
+     background-color:red;
+     color:white;
+     padding-top:4px;
+     padding-bottom:4px;
+     padding-left:8px;
+     padding-right:8px;
+     font-weight:bold;
+   }
    @media(max-width:1100px){
    	 .entry{
        width:45.5vw;
