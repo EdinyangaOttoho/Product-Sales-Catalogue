@@ -1,0 +1,67 @@
+   body{
+   	 margin:1.3vw;
+     margin-top:2vw;
+     background-image:linear-gradient(60deg,#f2f2f2,white);
+   }
+   .floater{
+   	 margin:1vw;
+   	 float:left;
+   }
+   .entry{
+     border-radius:15px;
+     padding-top:20px;
+     padding-bottom:20px;
+     background-color:white;
+     box-shadow:-1px 2px 1px 1px lightgray;
+     width:30vw;
+   }
+   .item-image{
+   	 width:80%;
+   	 height:300px;
+   }
+   .price-tag{
+     font-family:Trebuchet MS;
+     font-size:22px;
+   }
+   .buy{
+     padding:10px;
+     border-radius:10px;
+     font-weight:bold;
+     color:white;
+     background-image:linear-gradient(60deg,cornflowerblue,powderblue);
+     font-family:tahoma;
+     cursor:hand;
+     font-size:19px;
+     border:0px;
+   }
+   .product{
+     font-family:Trebuchet MS;
+     font-size:25px;
+     font-weight:bolder;
+     color:maroon;
+     text-shadow:gray 2px 2px 1px;
+   }
+   .pro{
+     font-family:Trebuchet MS;
+     font-size:32px;
+     font-weight:bolder;
+     color:orange;
+     text-shadow:gray 2px 2px 1px;
+   }
+   @media(max-width:1100px){
+   	 .entry{
+       width:45.5vw;
+   	 }
+   }
+   @media(max-width:700px){
+   	 .entry{
+       width:90vw;
+   	 }
+   	  .floater{
+       float:none;
+       margin-top:25px;
+   	 }
+   	 .item-image{
+   	 	width:85%;
+   	 }
+   }
