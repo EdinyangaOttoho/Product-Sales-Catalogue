@@ -6,6 +6,31 @@
 <link rel="shortcut icon" href="strap.png">
 <script src="https://js.paystack.co/v1/inline.js"></script>
 <script src="app.js"></script>
+<script>
+	function paywithpaystack(){
+    var handler = PaystackPop.setup({
+        key:'pk_test_ccb78c39f39b80d0b47734286a4a2d1d9dcc3ab1',
+        email:'elzucky@gmail.com',
+        amount:total * 100,
+        metadata:{
+          custom_fields:[
+            {
+              display_name:'Product (s)',
+              variable_name:'product',
+              value:p
+            }
+          ]
+        },
+        callback:function(){
+          alert("Transaction Completed");
+        },
+        onClose:function(){
+          alert("Transaction Cancelled");
+        }
+    });
+    handler.openIframe();
+}
+</script>
 <title>TechStrap | Product Catalogue</title></head>
 <body onload="notify()">
 	<center><label class="pro">Our Product Catalogue</label></center>
@@ -27,7 +52,7 @@
 	 	  	<br>
 	 	  	<center><label class="price-tag"><b>NGN 2500</b></label></center>
 	 	  	<br>
-            <center><button class="buy" value="Golden Wristwatches||elzucky@gmail.com||2500" onclick="t = this.value;pay()"><em>Buy Now</em></button></center>
+            <center><button class="buy" value="Golden Wristwatches||2500" onclick="t = this.value;pay()"><em>Add to Cart</em></button></center>
 	 	  </td>
 	 	</tr>
 	 </table>
@@ -48,7 +73,7 @@
 	 	  	<br>
 	 	  	<center><label class="price-tag"><b>NGN 1800</b></label></center>
 	 	  	<br>
-            <center><button class="buy" value="Wi-Fi Headphones||elzucky@gmail.com||1800" onclick="t = this.value;pay()"><em>Buy Now</em></button></center>
+            <center><button class="buy" value="Wi-Fi Headphones||1800" onclick="t = this.value;pay()"><em>Add to Cart</em></button></center>
 	 	  </td>
 	 	</tr>
 	 </table>
@@ -69,7 +94,7 @@
 	 	  	<br>
 	 	  	<center><label class="price-tag"><b>NGN 15000</b></label></center>
 	 	  	<br>
-            <center><button class="buy" value="Jewellery Box||elzucky@gmail.com||15000" onclick="t = this.value;pay()"><em>Buy Now</em></button></center>
+            <center><button class="buy" value="Jewellery Box||15000" onclick="t = this.value;pay()"><em>Add to Cart</em></button></center>
 	 	  </td>
 	 	</tr>
 	 </table>
@@ -90,7 +115,7 @@
 	 	  	<br>
 	 	  	<center><label class="price-tag"><b>NGN 5400</b></label></center>
 	 	  	<br>
-            <center><button class="buy" value="Sneakers||elzucky@gmail.com||5400" onclick="t = this.value;pay()"><em>Buy Now</em></button></center>
+            <center><button class="buy" value="Sneakers||5400" onclick="t = this.value;pay()"><em>Add to Cart</em></button></center>
 	 	  </td>
 	 	</tr>
 	 </table>
@@ -111,7 +136,7 @@
 	 	  	<br>
 	 	  	<center><label class="price-tag"><b>NGN 1000</b></label></center>
 	 	  	<br>
-            <center><button class="buy" value="Leather Wallet||elzucky@gmail.com||1000" onclick="t = this.value;pay()"><em>Buy Now</em></button></center>
+            <center><button class="buy" value="Leather Wallet||1000" onclick="t = this.value;pay()"><em>Add to Cart</em></button></center>
 	 	  </td>
 	 	</tr>
 	 </table>
@@ -119,4 +144,21 @@
 	</div>
 </center>
 </body>
+<button class="cart-click" onclick="cart()"></button>
+<div id="cart">
+	<center>
+		<table id="cart-items">
+		 <tr><td style="height:10px"><p align="right"><button class="close" onclick="cl()">&times;</button></p></td></tr>
+		 <tr>
+		   <td>
+			<div style="width:100%;height:100%;overflow-y:auto">
+			  <table style="width:100%" id="cartlist">
+			  
+			  </table>
+			</div>
+		   </td>
+		 </tr>
+		</table>
+	</center>
+</div>
 </html>
