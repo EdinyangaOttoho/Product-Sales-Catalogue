@@ -27,3 +27,30 @@ function pay(){
       });
       handler.openIframe();
 }
+function notify(){
+	var interv = setTimeout(function(){
+      if (Notification.permission === "granted"){
+			var options = {
+              body:'Thanks for visiting TechStrap. Here, we give you the most affordable products. Shop now and stand a chance to win rewards',
+              icon:'strap.png',
+              dir:'ltr'
+			};
+			var notification = new Notification("Welcome",options);
+		}
+		else if (Notification.permission !== "denied"){
+            Notification.requestPermission(function(permission){
+              if (!('permission' in windows)){
+                 Notification.permission = permission;
+              }
+              if (permission === "granted"){
+              	 var options = {
+                   body:'Thanks for visiting TechStrap. Here, we give you the most affordable products. Shop now and stand a chance to win rewards',
+                   icon:'strap.png',
+                   dir:'ltr'
+			     };
+			     var notification = new Notification("Welcome",options);
+              }
+          });
+		}
+	},5000);
+}
