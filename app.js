@@ -12,6 +12,8 @@ function pay(){
       p += "," + spl[0];
       a += "," + spl[1];
     }
+    var pr = p.split(",");
+    document.getElementById("counter").innerHTML = pr.length;
 }
 function cl(){
   document.getElementById("cart").style.visibility='hidden';
